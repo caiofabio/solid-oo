@@ -10,8 +10,18 @@ public class Airplane {
   }
 
   // non-sense...
-  public void doPredictiveMaintenance() {
-    System.out.println("The airplane is doing maintenance ???");
+  public void doMaintenance(String maintenanceType) {
+    if (maintenanceType.equals("predictive")) {
+      System.out.println("The airplane is doing predictive maintenance ???");
+      return;
+    }
+    
+    if (maintenanceType.equals("corrective")) {
+      System.out.println("The airplane is doing corrective maintenance ???");
+      return;
+    }
+
+    System.out.println("Oh, well ... this is embarrassing  ... we're under maintenance ?");
   }
 
   public void taxi() {
