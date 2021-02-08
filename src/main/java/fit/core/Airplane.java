@@ -1,12 +1,19 @@
 package fit.core;
 
-public class Airplane {
+public class Airplane implements Motorized {
+  @Override
   public void start() {
     System.out.println("The airplane is starting ...");
   }
 
+  @Override
   public void stop() {
     System.out.println("The airplane is stopping ...");
+  }
+
+  @Override
+  public void reverse() {
+    throw new IllegalStateException("Propeller airplane can't reverse");
   }
 
   // non-sense...
